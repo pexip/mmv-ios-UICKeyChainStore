@@ -1051,9 +1051,9 @@ static NSString *_defaultService;
             if (server) {
                 sharedCredential[@"server"] = server;
             }
-            NSString *account = credential[(__bridge __strong id)kSecAttrAccount];
-            if (account) {
-                sharedCredential[@"account"] = account;
+            NSString *accountAttr = credential[(__bridge __strong id)kSecAttrAccount];
+            if (accountAttr) {
+                sharedCredential[@"account"] = accountAttr;
             }
             NSString *password = credential[(__bridge __strong id)kSecSharedPassword];
             if (password) {
