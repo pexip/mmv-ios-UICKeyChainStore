@@ -87,12 +87,10 @@ typedef NS_ENUM(NSInteger, UICKeyChainStoreAuthenticationType) {
 typedef NS_ENUM(NSInteger, UICKeyChainStoreAccessibility) {
     UICKeyChainStoreAccessibilityWhenUnlocked = 1,
     UICKeyChainStoreAccessibilityAfterFirstUnlock,
-    UICKeyChainStoreAccessibilityAlways,
     UICKeyChainStoreAccessibilityWhenPasscodeSetThisDeviceOnly
     __OSX_AVAILABLE_STARTING(__MAC_10_10, __IPHONE_8_0),
     UICKeyChainStoreAccessibilityWhenUnlockedThisDeviceOnly,
     UICKeyChainStoreAccessibilityAfterFirstUnlockThisDeviceOnly,
-    UICKeyChainStoreAccessibilityAlwaysThisDeviceOnly,
 }
 __OSX_AVAILABLE_STARTING(__MAC_10_9, __IPHONE_4_0);
 

@@ -1339,16 +1339,12 @@ static NSString *_defaultService;
             return kSecAttrAccessibleWhenUnlocked;
         case UICKeyChainStoreAccessibilityAfterFirstUnlock:
             return kSecAttrAccessibleAfterFirstUnlock;
-        case UICKeyChainStoreAccessibilityAlways:
-            return kSecAttrAccessibleAlways;
         case UICKeyChainStoreAccessibilityWhenPasscodeSetThisDeviceOnly:
             return kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly;
         case UICKeyChainStoreAccessibilityWhenUnlockedThisDeviceOnly:
             return kSecAttrAccessibleWhenUnlockedThisDeviceOnly;
         case UICKeyChainStoreAccessibilityAfterFirstUnlockThisDeviceOnly:
             return kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly;
-        case UICKeyChainStoreAccessibilityAlwaysThisDeviceOnly:
-            return kSecAttrAccessibleAlwaysThisDeviceOnly;
         default:
             return nil;
     }
