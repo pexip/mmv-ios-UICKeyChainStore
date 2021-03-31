@@ -150,7 +150,7 @@ static NSString *_defaultService;
 + (NSString *)stringForKey:(NSString *)key service:(NSString *)service accessGroup:(NSString *)accessGroup error:(NSError *__autoreleasing *)error
 {
     if (!key) {
-        NSError *e = [self argumentError:NSLocalizedString(@"the key must not to be nil", nil)];
+        NSError *e = [self argumentError:NSLocalizedStringFromTable(@"the key must not to be nil", @"UICKeyChainStore", nil)];
         if (error) {
             *error = e;
         }
@@ -230,7 +230,7 @@ static NSString *_defaultService;
     if (data) {
         return [self setData:data forKey:key service:service accessGroup:accessGroup genericAttribute:genericAttribute error:error];
     }
-    NSError *e = [self conversionError:NSLocalizedString(@"failed to convert string to data", nil)];
+    NSError *e = [self conversionError:NSLocalizedStringFromTable(@"failed to convert string to data", @"UICKeyChainStore", nil)];
     if (error) {
         *error = e;
     }
@@ -267,7 +267,7 @@ static NSString *_defaultService;
 + (NSData *)dataForKey:(NSString *)key service:(NSString *)service accessGroup:(NSString *)accessGroup error:(NSError *__autoreleasing *)error
 {
     if (!key) {
-        NSError *e = [self argumentError:NSLocalizedString(@"the key must not to be nil", nil)];
+        NSError *e = [self argumentError:NSLocalizedStringFromTable(@"the key must not to be nil", @"UICKeyChainStore", nil)];
         if (error) {
             *error = e;
         }
@@ -341,7 +341,7 @@ static NSString *_defaultService;
 + (BOOL)setData:(NSData *)data forKey:(NSString *)key service:(NSString *)service accessGroup:(NSString *)accessGroup genericAttribute:(id)genericAttribute error:(NSError * __autoreleasing *)error
 {
     if (!key) {
-        NSError *e = [self argumentError:NSLocalizedString(@"the key must not to be nil", nil)];
+        NSError *e = [self argumentError:NSLocalizedStringFromTable(@"the key must not to be nil", @"UICKeyChainStore", nil)];
         if (error) {
             *error = e;
         }
@@ -381,7 +381,7 @@ static NSString *_defaultService;
         if (string) {
             return string;
         }
-        NSError *e = [self.class conversionError:NSLocalizedString(@"failed to convert data to string", nil)];
+        NSError *e = [self.class conversionError:NSLocalizedStringFromTable(@"failed to convert data to string", @"UICKeyChainStore", nil)];
         if (error) {
             *error = e;
         }
@@ -432,7 +432,7 @@ static NSString *_defaultService;
     if (data) {
         return [self setData:data forKey:key genericAttribute:genericAttribute label:label comment:comment error:error];
     }
-    NSError *e = [self.class conversionError:NSLocalizedString(@"failed to convert string to data", nil)];
+    NSError *e = [self.class conversionError:NSLocalizedStringFromTable(@"failed to convert string to data", @"UICKeyChainStore", nil)];
     if (error) {
         *error = e;
     }
@@ -463,7 +463,7 @@ static NSString *_defaultService;
             CFRelease(data);
             return ret;
         } else {
-            NSError *e = [self.class unexpectedError:NSLocalizedString(@"Unexpected error has occurred.", nil)];
+            NSError *e = [self.class unexpectedError:NSLocalizedStringFromTable(@"Unexpected error has occurred.", @"UICKeyChainStore", nil)];
             if (error) {
                 *error = e;
             }
@@ -515,7 +515,7 @@ static NSString *_defaultService;
 - (BOOL)setData:(NSData *)data forKey:(NSString *)key genericAttribute:(id)genericAttribute label:(NSString *)label comment:(NSString *)comment error:(NSError *__autoreleasing *)error
 {
     if (!key) {
-        NSError *e = [self.class argumentError:NSLocalizedString(@"the key must not to be nil", nil)];
+        NSError *e = [self.class argumentError:NSLocalizedStringFromTable(@"the key must not to be nil", @"UICKeyChainStore", nil)];
         if (error) {
             *error = e;
         }
@@ -558,7 +558,7 @@ static NSString *_defaultService;
         }
         
         if (unexpectedError) {
-            NSLog(@"error: [%@] %@", @(unexpectedError.code), NSLocalizedString(@"Unexpected error has occurred.", nil));
+            NSLog(@"error: [%@] %@", @(unexpectedError.code), NSLocalizedStringFromTable(@"Unexpected error has occurred.", @"UICKeyChainStore", nil));
             if (error) {
                 *error = unexpectedError;
             }
@@ -595,7 +595,7 @@ static NSString *_defaultService;
         }
         
         if (unexpectedError) {
-            NSLog(@"error: [%@] %@", @(unexpectedError.code), NSLocalizedString(@"Unexpected error has occurred.", nil));
+            NSLog(@"error: [%@] %@", @(unexpectedError.code), NSLocalizedStringFromTable(@"Unexpected error has occurred.", @"UICKeyChainStore", nil));
             if (error) {
                 *error = unexpectedError;
             }
@@ -651,7 +651,7 @@ static NSString *_defaultService;
 + (BOOL)removeItemForKey:(NSString *)key service:(NSString *)service accessGroup:(NSString *)accessGroup error:(NSError *__autoreleasing *)error
 {
     if (!key) {
-        NSError *e = [self.class argumentError:NSLocalizedString(@"the key must not to be nil", nil)];
+        NSError *e = [self.class argumentError:NSLocalizedStringFromTable(@"the key must not to be nil", @"UICKeyChainStore", nil)];
         if (error) {
             *error = e;
         }
@@ -975,7 +975,7 @@ static NSString *_defaultService;
             }
         }];
     } else {
-        NSError *error = [self.class argumentError:NSLocalizedString(@"the server property must not to be nil, should use 'keyChainStoreWithServer:protocolType:' initializer to instantiate keychain store", nil)];
+        NSError *error = [self.class argumentError:NSLocalizedStringFromTable(@"the server property must not to be nil, should use 'keyChainStoreWithServer:protocolType:' initializer to instantiate keychain store", @"UICKeyChainStore", nil)];
         if (completion) {
             completion(nil, nil, error);
         }
@@ -1000,7 +1000,7 @@ static NSString *_defaultService;
             }
         }];
     } else {
-        NSError *error = [self.class argumentError:NSLocalizedString(@"the server property must not to be nil, should use 'keyChainStoreWithServer:protocolType:' initializer to instantiate keychain store", nil)];
+        NSError *error = [self.class argumentError:NSLocalizedStringFromTable(@"the server property must not to be nil, should use 'keyChainStoreWithServer:protocolType:' initializer to instantiate keychain store", @"UICKeyChainStore", nil)];
         if (completion) {
             completion(nil, error);
         }
@@ -1017,7 +1017,7 @@ static NSString *_defaultService;
             }
         });
     } else {
-        NSError *error = [self.class argumentError:NSLocalizedString(@"the server property must not to be nil, should use 'keyChainStoreWithServer:protocolType:' initializer to instantiate keychain store", nil)];
+        NSError *error = [self.class argumentError:NSLocalizedStringFromTable(@"the server property must not to be nil, should use 'keyChainStoreWithServer:protocolType:' initializer to instantiate keychain store", @"UICKeyChainStore", nil)];
         if (completion) {
             completion(error);
         }
@@ -1192,7 +1192,7 @@ static NSString *_defaultService;
                 }
             }
             if (!accessControl) {
-                NSString *message = NSLocalizedString(@"Unexpected error has occurred.", nil);
+                NSString *message = NSLocalizedStringFromTable(@"Unexpected error has occurred.", @"UICKeyChainStore", nil);
                 NSError *e = [self.class unexpectedError:message];
                 if (error) {
                     *error = e;

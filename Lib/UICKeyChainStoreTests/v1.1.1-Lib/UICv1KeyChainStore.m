@@ -174,7 +174,7 @@ static NSString *_defaultService;
 {
     if (!key) {
         if (error) {
-            *error = [NSError errorWithDomain:UICv1KeyChainStoreErrorDomain code:UICv1KeyChainStoreErrorInvalidArguments userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"`key` must not to be nil", nil)}];
+            *error = [NSError errorWithDomain:UICv1KeyChainStoreErrorDomain code:UICv1KeyChainStoreErrorInvalidArguments userInfo:@{NSLocalizedDescriptionKey: NSLocalizedStringFromTable(@"`key` must not to be nil", @"UICKeyChainStore", nil)}];
         }
         return nil;
     }
@@ -243,7 +243,7 @@ static NSString *_defaultService;
 {
     if (!key) {
         if (error) {
-            *error = [NSError errorWithDomain:UICv1KeyChainStoreErrorDomain code:UICv1KeyChainStoreErrorInvalidArguments userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"`key` must not to be nil", nil)}];
+            *error = [NSError errorWithDomain:UICv1KeyChainStoreErrorDomain code:UICv1KeyChainStoreErrorInvalidArguments userInfo:@{NSLocalizedDescriptionKey: NSLocalizedStringFromTable(@"`key` must not to be nil", @"UICKeyChainStore", nil)}];
         }
         return NO;
     }
@@ -353,7 +353,7 @@ static NSString *_defaultService;
 {
     if (!key) {
         if (error) {
-            *error = [NSError errorWithDomain:UICv1KeyChainStoreErrorDomain code:UICv1KeyChainStoreErrorInvalidArguments userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"`key` must not to be nil", nil)}];
+            *error = [NSError errorWithDomain:UICv1KeyChainStoreErrorDomain code:UICv1KeyChainStoreErrorInvalidArguments userInfo:@{NSLocalizedDescriptionKey: NSLocalizedStringFromTable(@"`key` must not to be nil", @"UICKeyChainStore", nil)}];
         }
         return error == nil;
     }
@@ -411,7 +411,7 @@ static NSString *_defaultService;
 {
     if (!key) {
         if (error) {
-            *error = [NSError errorWithDomain:UICv1KeyChainStoreErrorDomain code:UICv1KeyChainStoreErrorInvalidArguments userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"`key` must not to be nil", nil)}];
+            *error = [NSError errorWithDomain:UICv1KeyChainStoreErrorDomain code:UICv1KeyChainStoreErrorInvalidArguments userInfo:@{NSLocalizedDescriptionKey: NSLocalizedStringFromTable(@"`key` must not to be nil", @"UICKeyChainStore", nil)}];
         }
         return NO;
     }
